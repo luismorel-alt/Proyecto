@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-body {
+/* Clase 2 */
+html {
    --bg-color-200:hsl(214, 25%, 3%);
     --bg-color-200-75:hsla(214, 25%, 11%, 0.75);
     --bg-color-400:hsl(214, 20%, 16%);
+
     --text-color:hsl(215, 25%, 90%);
+
     --accent-color-200:hsl(24, 43%, 7%);
     --accent-color-400:hsl(2, 86%, 56%);
     --accent-color-500:hsl(0, 100%, 78%);
@@ -13,19 +15,42 @@ body {
     --txt-base:"Nunito Sans", sans-serif;
 }
 
-
 body {
+    margin: 0;
+    font-family: var(--txt-base)";
     background-color: var(--bg-200) ;
     color:var(--text-color);
-    font-family: var(--txt-base)";
+    
     line;height: 1.5;
+}
+/* Clase 4 */
+.Principal {
+  background-image: url("img/006Fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+}
+
+/*clase5*/
+.menu{
+    list-style: none;
+    padding: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;    
+}
+.menu a:hover {
+  color: var(--color-secundario);
 }
 
 header,
 footer {
     background-color: var(--bg-color-400);
 }
-
 
 h1,
 h2{
@@ -39,3 +64,4 @@ header > h1 {
 footer h1{
     font-size: 1.5rem;
 }
+
