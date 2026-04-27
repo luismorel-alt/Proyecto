@@ -17,15 +17,15 @@ html {
 
 body {
     margin: 0;
-    font-family: var(--txt-base)";
-    background-color: var(--bg-200) ;
+    font-family: var(--txt-base);
+    background-color: var(var(--bg-color-200)) ;
     color:var(--text-color);
     
-    line;height: 1.5;
+    line-height: 1.5;
 }
 /* Clase 4 */
 .Principal {
-  background-image: url("img/006Fondo.jpg");
+  background-image: url('../img/006Fondo.jpg');
   background-size: cover;
   background-position: center;
   padding: 2rem;
@@ -34,17 +34,17 @@ body {
   background-repeat: no-repeat;
 }
 
-/*clase5*/
+/*clase5
 .menu{
     list-style: none;
-    padding: 0;
+er {    padding: 0;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;    
-}
-.menu a:hover {
-  color: var(--color-secundario);
+}*/
+.menu {
+  color: var(--accent-color-400);
 }
 
 header,
@@ -52,16 +52,66 @@ footer {
     background-color: var(--bg-color-400);
 }
 
-h1,
-h2{
-    font-family: var(--txt-heading);
+h1, h2, h3 {
+  font-family: var(--txt-heading);
+  color: var(--accent-color-400); 
+  text-align: center;    
+}
+.grid-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));/*clase4 1:28*/
+    gap: 1rem;
+    padding: 2rem;
+    aspect-ratio: 1; /*clase 4 mantiene el tamaño de los contenedores*/
+}    
+.rubro article {
+    background-color: var(--bg-color-400);
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.2); /*busque para darle algo*/
+    display: flex;
+    flex-direction: column;   /* imagen arriba, texto debajo */
+    align-items: center;      /* centra horizontalmente */
+    padding: 1rem; /*clase 4 1:39*/
+}     
+.rubro img {
+    width: 100%;              /* ocupa todo el ancho disponible */
+    height: auto;             /* mantiene proporción */
+    border-radius: 0.25rem;
+    object-fit: cover;        /*clase4* evita deformaciones */
+    margin-bottom: 0.5rem;
+}
+.rubro button {
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--accent-color-400);
+    color: white;
+    cursor: pointer;
+    font-family: var(--txt-base:"Nunito Sans", sans-serif;)
+    padding: 0.5rem 1rem;
+}
+.rubro button:hover {
+    background-color: var(--accent-color-500);
 }
 
-header > h1 {
-    color:var(--accent-color-400)
+footer {
+    background-color: var(--bg-color-400);
+    text-align: center;
+    padding: 1rem;
 }
-
-footer h1{
+footer h2 {
     font-size: 1.5rem;
+}
+
+/*.contenedor-grid {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+footer {
+    background-color: var(--bg-color-400);
+    text-align: center;
+    padding: 1rem;
 }
 

@@ -103,11 +103,11 @@ li{
    border-radius: 0.5rem;
 }
 
-/*flexbox*/
+/*flexbox
 
 .contenedor-flex{
     background-color: var(--bg-color-400);
-    padding: 1rem;
+    padding: 2rem;
     box-sizing: border-box;
 
     height: 25rem;
@@ -117,8 +117,10 @@ li{
     justify-content: space-evenly;/*controla el eje Principal*/
     align-items: center;/*ontrola el eje secundario*/
     gap: 1rem;/*distancia entre elementos*/
+    */
 }
-.contenedor-flex div{
+*/
+/*.contenedor-flex div{
     border:0.2rem solid var(--accent-color-400);
     padding: 1rem;
     text-align: center;
@@ -126,10 +128,10 @@ li{
 }
 
 /*Ejemplo de seccion bienvenida */
-#bienvenida{
+/*#bienvenida{
     margin-top: 3rem;
     min-height: 64rem;
-    background-image:
+    background-image: url('../img/006Fondo.jpg');
     background-repeat: no-repeat;
     bacgraund-size:cover;
     backgraund-attachment:fixed
