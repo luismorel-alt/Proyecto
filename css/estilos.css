@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 /* Clase 2 */
 html {
-   --bg-color-200:hsl(214, 25%, 3%);
+    --bg-color-200:hsl(214, 25%, 3%);
     --bg-color-200-75:hsla(214, 25%, 11%, 0.75);
     --bg-color-400:hsl(214, 20%, 16%);
 
@@ -54,6 +54,7 @@ footer {
 
 h1, h2, h3 {
   font-family: var(--txt-heading);
+  font-size: 1.75rem;
   color: var(--accent-color-400); 
   text-align: center;    
 }
@@ -82,17 +83,20 @@ h1, h2, h3 {
     margin-bottom: 0.5rem;
 }
 .rubro button {
+    background-color: var(--accent-color-400);
+    color: var(--text-color);
+    font-size: 1rem;
     margin-top: 0.5rem;
     border: none;
-    border-radius: 0.25rem;
-    background-color: var(--accent-color-400);
-    color: white;
+    border-radius: 0.3125rem;
     cursor: pointer;
-    font-family: var(--txt-base:"Nunito Sans", sans-serif;)
-    padding: 0.5rem 1rem;
+    padding: 0.625rem 1.25rem;
 }
 .rubro button:hover {
     background-color: var(--accent-color-500);
+}
+.rubro.button:active {
+    background-color: var(--accent-color-200);  
 }
 
 footer {
@@ -114,4 +118,29 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+/* regla para pantallas y ancho Hasta 768px*/
+@media (max-width: 768px) {
+    .rubro {
+        flex-direction: row;
+    }
+}
 
+.iniquien {
+    background-color: var(--bg-color-200);
+    padding: 1rem; /*clase 4 1:39*/
+    margin: 1.25rem;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;   /* imagen arriba, texto debajo */
+    align-items: center;      /* centra horizontalmente */
+}
+.iniquien {
+    color: var(--accent-color-500);
+    font-size: 1.5rem;
+    margin-bottom: 0.9375rem;
+}
+.iniquien {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
