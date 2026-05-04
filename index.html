@@ -13,7 +13,7 @@
         <h1>Servicios Generales</h1>
         <nav>
             <ul class="menu">
-                <li><a href="#quienes-somos">Servicios Generales</a></li>
+                <li><a href="#" id="btn-quienes">Quienes Somos</a></li>
                 <li><a href="#plomeria">Plomería</a></li>
                 <li><a href="#pintura">Pintura</a></li>
                 <li><a href="#refacciones">Refacciones</a></li>
@@ -22,11 +22,19 @@
         </nav>
     </header>
 <main>
-  <section id="inicio">
+  <section id="inicio"  Class="iniquien">
     <h2>Bienvenidos a Servicios Generales</h2>
     <p>Tienda de MI REMODELACION, inicio, ejecución y finalización</p>
   </section>
 
+  <section id="quienes_somos" Class="iniquien">
+    <h2>Quienes Somos</h2>
+    <p>Somos una empresa dedicada a brindar servicios generales: plomería,
+        pintura, refacciones y oportunidades de remodelación. Nuestro objetivo
+        es ofrecer soluciones rápidas y confiables para el hogar y la oficina.
+    </p>
+    <button id="cerrar-quienes">Cerrar</button>
+</section>
   <section class="Repair">
     <h1>Inicio | Progreso</h1>
     <div class="contenedor-grid">
@@ -46,6 +54,7 @@
           <img src="img/002Plomeria.jpg" alt="Portada del Catalogo Plomeria #2">
           <h3>Plomería #2</h3>
           <p>Instalaciones y reparaciones de cañerías</p>
+          <button onclick="window.open('plomeria.html','_blank')">Detalles</    button>
           <button>Favorito</button>
           <button>Agregar</button>
         </article>
@@ -80,15 +89,15 @@
           <button>Agregar</button>
         </article>
       </div>
+    </div>
+
   <footer>
     <h2>Sobre Servicios Generales</h2>
     <p>Luis Morel | 2026 | ISTEA</p>
   </footer>
-
-    </div>
   </section>
 </main>
-    
+<script src="js/Clase6.js" defer></script>
 </body>
 </html>
 

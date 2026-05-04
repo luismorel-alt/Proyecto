@@ -13,6 +13,7 @@ html {
 
     --txt-heading: "Bebas Neue", sans-serif;
     --txt-base:"Nunito Sans", sans-serif;
+    font-size: 16px;  /*Clase 6 = 1rem*/
 }
 
 body {
@@ -58,30 +59,35 @@ h1, h2, h3 {
   color: var(--accent-color-400); 
   text-align: center;    
 }
-.grid-contenedor {
+
+.contenedor-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));/*clase4 1:28*/
+    grid-template-columns:1fr 1fr 1fr;
     gap: 1rem;
     padding: 2rem;
-    aspect-ratio: 1; /*clase 4 mantiene el tamaño de los contenedores*/
-}    
-.rubro article {
+}
+                  
+.rubro {
     background-color: var(--bg-color-400);
     border-radius: 1rem;
     text-align: center;
     box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.2); /*busque para darle algo*/
+    padding: 1rem;    
+}   
+.rubro article {
     display: flex;
-    flex-direction: column;   /* imagen arriba, texto debajo */
-    align-items: center;      /* centra horizontalmente */
-    padding: 1rem; /*clase 4 1:39*/
-}     
+    flex-direction: column;
+    align-items: center;
+} 
 .rubro img {
-    width: 100%;              /* ocupa todo el ancho disponible */
-    height: auto;             /* mantiene proporción */
-    border-radius: 0.25rem;
+    width: 100%;              /*Clase 6 ocupa todo el ancho disponible */
+    height: 9rem;             /* mantiene proporción o fija */
     object-fit: cover;        /*clase4* evita deformaciones */
+    border-radius: 0.25rem;
     margin-bottom: 0.5rem;
+
 }
+*/
 .rubro button {
     background-color: var(--accent-color-400);
     color: var(--text-color);
@@ -90,7 +96,7 @@ h1, h2, h3 {
     border: none;
     border-radius: 0.3125rem;
     cursor: pointer;
-    padding: 0.625rem 1.25rem;
+    padding: 0.625rem 1.25rem; */
 }
 .rubro button:hover {
     background-color: var(--accent-color-500);
@@ -108,6 +114,7 @@ footer h2 {
     font-size: 1.5rem;
 }
 
+*/
 /*.contenedor-grid {
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
@@ -120,8 +127,8 @@ footer {
 }
 /* regla para pantallas y ancho Hasta 768px*/
 @media (max-width: 768px) {
-    .rubro {
-        flex-direction: row;
+    .contenedor-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -143,4 +150,16 @@ footer {
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--text-color);
+}
+
+#quienes_somos {
+    min_height 75vp; ;
+  display: none; /* oculto al inicio */
+}
+
+ul li {
+  font-weight: bold;       /* grueso */
+  color: var(--accent-color-400); 
+  font-size: 1.2rem;       /*fui ajustando más grande*/
+  margin-bottom: 0.5rem;   /*Regule espacios entre ítems*/
 }
