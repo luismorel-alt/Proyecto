@@ -13,15 +13,15 @@ html {
 
     --txt-heading: "Bebas Neue", sans-serif;
     --txt-base:"Nunito Sans", sans-serif;
+    --contenedor-sz:min(64rem, 100%);
     font-size: 16px;  /*Clase 6 = 1rem*/
 }
 
 body {
     margin: 0;
     font-family: var(--txt-base);
-    background-color: var(var(--bg-color-200)) ;
+    background-color:var(--bg-color-200) ;
     color:var(--text-color);
-    
     line-height: 1.5;
 }
 /* Clase 4 */
@@ -31,27 +31,34 @@ body {
   background-position: center;
   padding: 2rem;
   text-align: center;
-  color: white;
+  /*color: white;*/
   background-repeat: no-repeat;
+  min-height: 35vh;
 }
 
-/*clase5
-.menu{
-    list-style: none;
-er {    padding: 0;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;    
-}*/
+/*clase5*/
 .menu {
   color: var(--accent-color-400);
+  list-style: none;
+  padding: 0;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: block;           /* vertical */
+  text-align: center;       /* centra */
+  gap: 1rem;    
 }
 
-header,
-footer {
-    background-color: var(--bg-color-400);
+@media (max-width: 768px) {
+  .menu {
+    display: block;           /* vertical */
+    text-align: center;       /* centra */
+  }
+  .menu li {
+    margin-bottom: 0.75rem;   /* espacio entre ítems */
+  }
 }
+
 
 h1, h2, h3 {
   font-family: var(--txt-heading);
@@ -65,6 +72,7 @@ h1, h2, h3 {
     grid-template-columns:1fr 1fr 1fr;
     gap: 1rem;
     padding: 2rem;
+    align-items: stretch;
 }
                   
 .rubro {
@@ -72,22 +80,26 @@ h1, h2, h3 {
     border-radius: 1rem;
     text-align: center;
     box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.2); /*busque para darle algo*/
-    padding: 1rem;    
-}   
-.rubro article {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-} 
+    justify-content: space-between;
+    gap: 1rem;
+
+}   
+.rubro p {
+    margin: 0; /* elimina margen por defecto */
+    flex-grow: 1; /* ocupa espacio disponible */
+}
+
 .rubro img {
     width: 100%;              /*Clase 6 ocupa todo el ancho disponible */
-    height: 9rem;             /* mantiene proporción o fija */
+    height: 200px;           /* mantiene proporción o fija */
     object-fit: cover;        /*clase4* evita deformaciones */
     border-radius: 0.25rem;
     margin-bottom: 0.5rem;
-
 }
-*/
+
 .rubro button {
     background-color: var(--accent-color-400);
     color: var(--text-color);
@@ -96,7 +108,9 @@ h1, h2, h3 {
     border: none;
     border-radius: 0.3125rem;
     cursor: pointer;
-    padding: 0.625rem 1.25rem; */
+    padding: 0.625rem 1.25rem; 
+    width: 100%; 
+    max-width: 200px;/* ocupa todo el ancho del contenedor */
 }
 .rubro button:hover {
     background-color: var(--accent-color-500);
@@ -105,6 +119,10 @@ h1, h2, h3 {
     background-color: var(--accent-color-200);  
 }
 
+header,
+footer {
+    background-color: var(--bg-color-400);
+}
 footer {
     background-color: var(--bg-color-400);
     text-align: center;
@@ -112,18 +130,6 @@ footer {
 }
 footer h2 {
     font-size: 1.5rem;
-}
-
-*/
-/*.contenedor-grid {
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
-footer {
-    background-color: var(--bg-color-400);
-    text-align: center;
-    padding: 1rem;
 }
 /* regla para pantallas y ancho Hasta 768px*/
 @media (max-width: 768px) {
@@ -140,22 +146,22 @@ footer {
     display: flex;
     flex-direction: column;   /* imagen arriba, texto debajo */
     align-items: center;      /* centra horizontalmente */
-}
-.iniquien {
     color: var(--accent-color-500);
     font-size: 1.5rem;
     margin-bottom: 0.9375rem;
-}
-.iniquien {
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--text-color);
 }
 
+
 #quienes_somos {
-    min_height 75vp; ;
-  display: none; /* oculto al inicio */
+  max-height: 20rem;          /* altura*/
+  overflow-y: auto;           /* agrega scroll si se excede */
+    /*  display: none; /* oculto al inicio */
+    /*display:block */
 }
+
 
 ul li {
   font-weight: bold;       /* grueso */
